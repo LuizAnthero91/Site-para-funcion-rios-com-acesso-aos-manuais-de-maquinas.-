@@ -1,0 +1,316 @@
+/* ======= ESTILOS GERAIS ======= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #00aaff, #005f99);
+}
+
+/* ======= TELA DE LOGIN & TROCA DE SENHA ======= */
+#login, #trocar-senha-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container-login, .container-form {
+    background: #fff;
+    padding: 35px 25px;
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+    text-align: center;
+    width: 100%;
+    max-width: 420px;
+}
+
+.container-form {
+    max-width: 450px; /* Maior para a troca de senha */
+}
+
+.container-login img {
+    margin-bottom: 20px;
+}
+
+.container-login .titulo, .container-form .titulo {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    color: #222;
+}
+
+.container-form .titulo {
+    color: #000080;
+}
+.container-form .subtitulo {
+    font-size: 16px;
+    margin-bottom: 25px;
+    color: #222;
+}
+
+select, input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    margin-bottom: 15px;
+    font-size: 15px;
+}
+
+.aviso {
+    font-size: 13px;
+    margin-bottom: 18px;
+    color: #333;
+    line-height: 1.5em;
+    padding: 10px;
+    border-radius: 8px;
+    background: #f6f6f6;
+    border: 1px solid #ddd;
+}
+
+.mensagem-erro {
+    color: red !important;
+    font-weight: bold;
+}
+.mensagem-sucesso {
+    color: green !important;
+    font-weight: bold;
+}
+
+.btn {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 30px;
+    background: linear-gradient(135deg, #00aaff, #0088cc);
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: linear-gradient(135deg, #0088cc, #005f99);
+}
+
+.btn-salvar {
+    background: linear-gradient(135deg, #28a745, #1e7e34); /* Verde para salvar */
+}
+.btn-salvar:hover {
+    background: linear-gradient(135deg, #1e7e34, #155724);
+}
+
+/* ======= PÁGINA PRINCIPAL ======= */
+#principal {
+    display: none; 
+    margin: 0;
+    height: 100vh;
+    background-image: url('Arquivos/Imagens/maquina GO 3D.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: 'Orbitron', sans-serif;
+    position: relative;
+}
+
+#principal::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.37);
+    z-index: 0;
+}
+
+.top-bar {
+    background-color: #000080; 
+    color: white;
+    text-align: center;
+    padding: 25px 0; 
+    font-size: 2em;
+    font-weight: 700;
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+    z-index: 10;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Botões de Navegação */
+.botao-central, .botao, .botao-direito {
+    background-color: #fff;
+    border: 3px solid #0074d9; 
+    color: #222;
+    padding: 15px 30px;
+    font-size: 1.3em; 
+    font-family: 'Orbitron', sans-serif;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 700;
+}
+
+.botao-central:hover, .botao:hover, .botao-direito:hover {
+    background-color: #0074d9; 
+    color: #fff;
+    border-color: #fff; 
+    box-shadow: 0 0 20px #0074d9; 
+    transform: translateY(-2px); 
+}
+
+.botao-central {
+    position: absolute;
+    width: 500px;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 150px;
+    z-index: 1;
+}
+
+.painel-botoes {
+    position: absolute;
+    top: 150px;
+    left: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.painel-botoes-direito {
+    position: absolute;
+    top: 150px;
+    right: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.rodape-direita {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    font-size: 14px;
+    color: white;
+    font-family: Arial, sans-serif;
+    z-index: 999;
+}
+
+/* Botões de Ação Fixos */
+.botao-ajuda, .botao-sair {
+    position: fixed;
+    top: 35px;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 12px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    z-index: 9999;
+    transition: background-color 0.3s;
+}
+
+.botao-ajuda {
+    right: 10px;
+    background-color: #0074d9;
+    color: white;
+}
+.botao-ajuda:hover {
+    background-color: #000080;
+    color: #fff;
+}
+
+.botao-sair {
+    right: 150px; /* Posicionado à esquerda do Ajuda */
+    background-color: #dc3545; /* Vermelho para Sair */
+    color: white;
+}
+.botao-sair:hover {
+    background-color: #c82333; 
+    color: #fff;
+}
+
+
+/* --- ESTILOS DO RODAPÉ DE TECNOLOGIAS --- */
+
+.rodape-tecnologias {
+    width: 100%;
+    /* Posiciona o rodapé fixo na parte inferior, se necessário */
+  
+    bottom: 0; */
+    background-color: #333; /* Cor de fundo escura */
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.rodape-conteudo p {
+    margin: 15px 0;
+    font-size: 0.9em;
+    text-align: center;
+    align-items: center;
+   
+}
+
+.icones-tecnologia {
+    margin: 15px
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    gap: 35px; /* Espaçamento entre os ícones */
+}
+
+.icones-tecnologia a {
+    color: #fff;
+    text-align: center;
+    align-items: center;
+    font-size: 10.5em; /* Tamanho dos ícones */
+    transition: transform 0.3s ease-in-out;
+}
+
+.icones-tecnologia a:hover {
+    text-align: center;
+    align-items: center;
+    transform: scale(1.15); /* Efeito de zoom ao passar o mouse */
+}
+
+/* Cores específicas para cada tecnologia (opcional, mas recomendado) */
+.html-icon {
+    text-align: center;
+    align-items: center;
+    color: #e34c26; /* Laranja HTML */
+}
+.css-icon {
+    text-align: center;
+    align-items: center;
+    color: #264de4; /* Azul CSS */
+}
+.js-icon {
+    text-align: center;
+    align-items: center;
+    color: #f0db4f; /* Amarelo JS */
+}
+
+.sql-icon {
+    text-align: center;
+    align-items: center;
+    color: #8c72ca; /* Roxo/Database */
+}
+
