@@ -1,5 +1,5 @@
 # Site-para-funcionários-com-acesso-aos-manuais-de-maquinas.-
-Criação de uma pagina com Html, Css, JavaScript ,PHP, SQL e Xampp para acesso interno por matricula de funcionário com senha.
+Criação de um sistema web com Html, Css, JavaScript ,PHP, SQL e Xampp para acesso interno por matricula de funcionário com senha.
 
 Projeto visa facilitar acesso aos empregados técnicos aos manuais técnicos da empresa concentrando em um servidor local em que todos cadastrados no banco de dados tenham em qualquer máquina da empresa via IP os manuais sem ter que baixar em várias maquinas evitando vários arquivos repetidos ocupando HDs diversos.
 Instalação via xampp com ip fixo na rede
